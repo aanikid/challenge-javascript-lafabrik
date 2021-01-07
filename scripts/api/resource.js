@@ -7,7 +7,8 @@ class LibraryResource {
      * @see https://jikan.docs.apiary.io/#reference/
      */
     constructor(api, resource) {
-        throw new Error("Not implemented")
+        this.api = api;
+        this.resource = resource;
     }
 
     /**
@@ -16,6 +17,6 @@ class LibraryResource {
      * @returns {Promise} Promesse qui retourne les données JSON en cas de succès
      */
     fetch(query) {
-        throw new Error("Not implemented")
+        return fetch(`${query}`);
     }
 }

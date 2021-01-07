@@ -4,5 +4,6 @@
 window.onload = init
 
 function init() {
-    console.log("Coucou ! C'est ici que l'aventure commence ! Bon courage :-)")
+    const resources = new AnimeResource('https://api.jikan.moe/v3', 'anime');
+    const movie = resources.getDetail(1).then(response => response.json()).then(data => console.log(data));
 }
