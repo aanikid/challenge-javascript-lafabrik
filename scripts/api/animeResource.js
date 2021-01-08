@@ -10,6 +10,7 @@ class AnimeResource extends LibraryResource {
         super(api, 'anime');
     }
 
+    // get detail with id
     getDetail(id) {
         return this.fetch(`${this.api}/${this.resource}/${id}`);
     }
